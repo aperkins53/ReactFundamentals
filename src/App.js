@@ -1,20 +1,14 @@
 import './App.css';
-import Header from './components/Header'
-import Intro from './components/challenges/day01/Intro'
-import Home from './components/challenges/day01/Home'
-import Footer from './components/challenges/day01/Footer'
+import NameProp from './components/NameProp';
+import Contacts from './components/Contacts';
+import State from './components/State';
 
-function App() { //this is a root component
-  const name = 'Alec' //JS abpve return statement can be injected into JSX using { }
-
-  return (
+function App() {
+  return(
     <div className="App">
-      <h1>Welcome to React, {name}</h1>
-      <h2>We just modified our root App component</h2>
-      <Header /> { /* this is how you mount a component */}
-      <Intro />
-      <Home />
-      <Footer />
+      <NameProp  name="Alec" />
+      <Contacts name="Alec" age="23" school="FCHS" graduationYear="2016" />
+      <State />
     </div>
   );
 }
